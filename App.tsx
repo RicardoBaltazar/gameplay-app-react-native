@@ -9,7 +9,8 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 //biblioteca de loading que segura a tela de splash
 import AppLoading from 'expo-app-loading';
 
-import { SignIn } from './src/screens/SignIn';
+import { Routes } from './src/Routes';
+import { Background } from './src/components/Background'; // substituir os fragments por este componente
 
 export default function App() {
   //carregando as fontes e deixando a tela de splash enquanto as fontes não carregarem
@@ -25,8 +26,10 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-      <SignIn />
+      <Background>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+        <Routes />
+      </Background>
     </>
   );
 }

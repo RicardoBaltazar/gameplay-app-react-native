@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
     View,
@@ -10,6 +11,14 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { styles } from './styles';
 
 const SignIn = () => {
+    
+    const navigation = useNavigation(); 
+
+    //função para navegação após evento do usuário
+    function handleSignIn(){
+        navigation.navigate('Home')
+    }
+
     return (
         <View style={styles.container}>
 
@@ -34,6 +43,7 @@ const SignIn = () => {
                 <ButtonIcon 
                 title="Entrar com Discord" // esta tipada dentro de Props então não da erro
                 activeOpacity={0.7} // esta tipada dentro de Props e recuperada com '...rest' então não da erro
+                onPress={handleSignIn}
                 />
             </View>
         </View>
