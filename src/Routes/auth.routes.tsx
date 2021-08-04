@@ -19,17 +19,17 @@ const AuthRoutes = () => {
                     }
                 }}
             >
-                <Screen 
-                    name='AppointmentDetails'
-                    component={AppointmentDetails}
+                <Screen
+                    name='SignIn'
+                    component={SignIn}
                 />
-                <Screen 
+                <Screen
                     name='Home'
                     component={Home}
                 />
-                <Screen 
-                    name='SignIn'
-                    component={SignIn}
+                <Screen
+                    name='AppointmentDetails'
+                    component={AppointmentDetails}
                 />
             </Navigator>
         </>

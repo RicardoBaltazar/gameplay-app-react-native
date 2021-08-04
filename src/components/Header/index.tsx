@@ -42,7 +42,7 @@ const Header = ({ title, action }: Props) => {
                     { title }
                 </Text>
 
-                {
+                {   //passando o botão de forma dinâmica
                     action &&
                     <View>
                         { action }
